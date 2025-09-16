@@ -11,6 +11,11 @@ dotenv.config(); // Load environment variables
 app.use(express.json());
 app.use(cors());
 
+//
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'Travel agency backend is running!' });
+});
+
 // MongoDB connection using db.js
 connectDB(); // Call the function to establish the connection
 
